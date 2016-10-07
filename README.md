@@ -1,1 +1,2 @@
-"# PluralSight_QueryTuning" 
+# PluralSight QueryTuning 
+https://app.pluralsight.com/account/changesubscription/
