@@ -50,10 +50,22 @@
       - Evaluate possibility of non-clustered index
 
   ## Non-Clustered Index Scan
-    - When 
-      - Columns part of non-clustered index accessed in query
+   
+   ## Non-Clustered Index Seek
+     - When
+       - Columns part of non-clustered index accessed in query and rows located in B+ tree
+     - Good or Bad
+       - Good
+     - Action Item
+       - Further evaluate other operators
+  
+  ## Lookups
+    - When
+      - Query Optimizer uses non-custered index to search few column data and base table for other columns data
     - Good or Bad
-      - Bad unless large data with most columns and rows retrieved
-    - Action item
-      - Create more refined non-clustered index
+      - Bad
+    - Action Item
+      - Included Index or Covered Index
+    - When the query optimizer uses the Non-Clustered Index to narrow down the number of rows to get the columns needed as part of the table or the select condition, it needs to hop to the base table and then lookups will start.  
+    - Lookups can be deterrent to performance unless you use a covered index or included index
 
