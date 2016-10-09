@@ -69,3 +69,21 @@
     - When the query optimizer uses the Non-Clustered Index to narrow down the number of rows to get the columns needed as part of the table or the select condition, it needs to hop to the base table and then lookups will start.  
     - Lookups can be deterrent to performance unless you use a covered index or included index
 
+  ## Nested Loops Join
+    - When 
+      - A nested loops join is particularly effective if the outer input is small and the innr input is pre-indexed and large.
+    - Good or Bad
+      - Good in small transactions
+    - Action Item
+      - Optimizer knows best
+  
+  ## Merge Join
+    - When
+      - A merge loops join is particularly effective when both the inputs are sorted on the merge column
+    - Good or Bad
+      - Good when query has large result set
+      - Bad when inputs are not sorted
+    - Action Item
+      - Optimizer knows best
+
+  ## Specifying the Join behavior will almost always deter query performance, allow SQL optimizer to make best deision

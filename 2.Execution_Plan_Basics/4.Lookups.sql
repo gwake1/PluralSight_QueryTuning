@@ -38,7 +38,7 @@ DROP INDEX IX_MySalesOrderDetail_ProductID_OrderQty_SpecialOfferID
 ON dbo.MySalesOrderDetail
 GO
 
--- Option 2: Add COlumn as Included Column
+-- Option 2: Add Column as Included Column
 CREATE NONCLUSTERED INDEX IX_MySalesOrderDetail_ProductID_OrderQty_SpecialOfferID
 ON MySalesOrderDetail
 (ProductID)
@@ -57,3 +57,7 @@ Where ProductID = 789
 GO
 -- Logical Reads 3
 -- Execution Plan NonClustered Index Seek
+
+
+-- Clean Up
+ --DROP INDEX IX_MySalesOrderDetail_ProductID_OrderQty_SpecialOfferID ON dbo.MySalesOrderDetail
