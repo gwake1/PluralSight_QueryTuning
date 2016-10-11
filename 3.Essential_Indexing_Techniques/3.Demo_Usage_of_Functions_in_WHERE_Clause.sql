@@ -114,3 +114,6 @@ FROM UDFEffect
 WHERE CityTrim = 'Salt Lake City'
 GO
 -- Performs an Index Scan with 56% cost
+
+-- Clean Up
+SET STATISTICS IO OFF
